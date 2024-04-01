@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.container{
+    position: relative;
+    height: 100vh;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  rgb(20, 20, 20);
+    background-image: url(song1.jpg);
+    object-fit: fill;
+    background-size: 50vw ;
+    padding: 50px;
+}
+.bc{
+    animation: float 5s ease-in-out  infinite;
+    animation-delay: 0.2s;
+}
+@keyframes float {
+    0%{
+     transform: translateY(30px);
+    }
+    25%{
+     transform: translateX(20px);
+    }
+    50%{
+     transform: translateY(-10px);
+    }
+    75%{
+     transform: translateX(-30px);
+    }
+    85%{
+     transform: translateY(15px);
+    }
+     100%{
+       transform: translateY(0px);
+     }
+ }
+ 
+ 
+ 
+/* body::before{
+    content: '';
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+   background: linear-gradient(rgb(51, 199, 199),rgb(223, 93, 93));
+   clip-path: circle(20% at 10% 10%);
+}
+body::after{
+    content: '';
+    top: 0;
+    left: 0;
+   height: 100%;
+   width: 100%;
+    background: linear-gradient(rgb(22, 103, 233),rgb(119, 220, 127));
+    clip-path: circle(30% at right 90%);
+} */
+.card{
+    position: relative;
+     display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+    height: 250px;
+    width: 350px;
+    padding: 20px;
+    /* background-color: aliceblue; */
+    border-radius: 20px;
+    opacity: 0.8;
+    /* transition:   opacity 250ms ease-in-out; */
+    /* box-shadow: 20px 20px 50px rgba(0,0,0,1); */
+    background: black;
+}
+ul{
+    overflow: hidden;
+    height: 20px;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+li{
+    font-size: 20px;
+    color: white;
+    list-style: none;
+    top: 0;
+    /* animation: slide 40s  infinite; */
+    position: relative;
+    animation: slide 15s steps(5) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -113px;
+    }
+}
+
+
+span::before{
+    content: '';
+    left: 0%;
+    height: 100%;
+    width: 200%;
+    position: absolute;
+    background-color: black;
+    animation: fade 3s steps(10)  infinite;
+}
+
+@keyframes fade {
+    0%{
+       left: -20%;
+    }
+    100%{
+       left: 100%;
+    }
+    /* 100%{
+        left: -20%;
+    } */
+}
+
+.img{
+    background-image: url(enn.jpeg);
+  background-size: 100%;
+    object-fit: fit;
+    height: 100px;
+    width: 100px;
+}
+.im{
+    display: flex;
+    flex-direction: row;
+    color: white;
+   align-items: center;
+}
+p{
+    margin-left: 20px;
+    font-size: 25px;
+}
+
+@media all and (max-width: 500px) {
+    .card{
+       height: 150px;
+       width: 250px;
+   }
+   .img{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    opacity: 1;
+   }
+ p{
+    font-size: 17px;
+ }
+ ul{
+    margin-top: 20px;
+    margin-left: 30px;
+ }
+  li{
+    font-size: 15px;
+  }
+  @keyframes slide {
+    100%{
+        top: -90px;
+    }
+}
+}
+
